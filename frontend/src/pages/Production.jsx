@@ -1,6 +1,6 @@
 import CollapsableSidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
-import ProductionsTable from "../components/ProductionsTable";
+import BatchesTable from "../components/Batches/Batchestable";
 
 function Production() {
   return (
@@ -11,7 +11,7 @@ function Production() {
 
         <main className="bg-gray-200 dark:bg-gray-900  h-full w-full flex flex-col">
           <div className="flex-grow mt-16 overflow-hidden">
-            <ProductionsTable />
+            <BatchesTable />
           </div>
         </main>
       </div>

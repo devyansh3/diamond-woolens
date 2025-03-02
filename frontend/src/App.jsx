@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Production from "./pages/Production";
-import AddNewProduction from "./pages/AddNewProduction";
 import { ProductionProvider } from "./context/ProductionContext";
+import Production from "./pages/Production";
+import Orders from "./pages/Orders";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Production />} />
-          <Route path="/newProduction" element={<AddNewProduction />} />
+          <Route path="/orders" element={<Orders />} />
         </Routes>
 
         {/* <Route path="/login" element={<SignInPage />} /> */}

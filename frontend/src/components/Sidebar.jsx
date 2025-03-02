@@ -86,7 +86,16 @@ function CollapsableSidebar() {
                 className={`transition-colors duration-300 flex items-center hover:bg-primary-700 ${isActive("/") ? "bg-primary-500" : ""
                   } ${isOpen ? "max-w-[200px]" : "max-w-[40px]"}`}
               >
-                {isOpen && "Production"}
+                {isOpen && "Batches"}
+              </Sidebar.Item>
+
+              <Sidebar.Item
+                icon={AlertCircle}
+                onClick={() => navigate("/orders")}
+                className={`transition-colors duration-300 flex items-center hover:bg-primary-700 ${isActive("/orders") ? "bg-primary-500" : ""
+                  } ${isOpen ? "max-w-[200px]" : "max-w-[40px]"}`}
+              >
+                {isOpen && "Orders"}
               </Sidebar.Item>
 
 

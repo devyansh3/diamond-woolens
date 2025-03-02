@@ -51,8 +51,8 @@ function BatchesTable() {
           <div className="h-full max-h-[calc(100vh-100px)] overflow-y-auto p-2 text-lg">
             <div className="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden h-full">
               <div className="mx-4">
-                <div className="flex items-center justify-between space-x-4 pt-3">
-                  <div className="flex-1 flex items-center space-x-3 pb-2">
+                <div className="flex items-center justify-between space-x-4 py-2">
+                  <div className="flex-1 flex items-center space-x-3 ">
                     <h5 className="dark:text-white font-semibold">Batches</h5>
                   </div>
                   <div className="w-full md:w-auto flex flex-col md:flex-row mb-3 md:mb-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">

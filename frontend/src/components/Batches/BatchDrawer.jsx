@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import { toast } from "react-hot-toast";
+import PropTypes from 'prop-types';
 
 const defaultBatch = {
     colorFamily: "",
@@ -182,5 +183,12 @@ function BatchDrawer({ isOpen, initialData, onClose, onSave }) {
         </div>
     );
 }
+
+BatchDrawer.propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    initialData: PropTypes.object,
+    onClose: PropTypes.func.isRequired,
+    onSave: PropTypes.func.isRequired,
+};
 
 export default BatchDrawer;
