@@ -1,26 +1,17 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Button, Sidebar } from "flowbite-react";
-import { HiUser } from "react-icons/hi";
 import {
   AlertCircle,
-  AlertTriangle,
-  Handshake,
-  Receipt,
   ArrowLeftCircleIcon,
   ArrowRightCircleIcon,
-  BarChart2Icon,
-  HouseIcon,
-  Users2Icon,
-  NotebookPenIcon,
-  BookUserIcon,
+
 } from "lucide-react";
 import { motion } from "framer-motion";
 // import { UserContext } from "../context/UserContext";
 
 function CollapsableSidebar() {
   //   const { currentUser, currentStore, setAuthData } = useContext(UserContext);
-  const [openDropdown, setOpenDropdown] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
   const location = useLocation();
   const navigate = useNavigate();
@@ -35,15 +26,8 @@ function CollapsableSidebar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleStoreSelect = (store) => {
-    setOpenDropdown(false);
-    setAuthData({ store });
-    setTimeout(() => {
-      navigate("/");
-    });
-  };
 
-  const toggleDropdown = () => setOpenDropdown(!openDropdown);
+
   const isActive = (path) => location.pathname === path;
   const toggleSidebar = () => setIsOpen(!isOpen);
 
@@ -99,22 +83,13 @@ function CollapsableSidebar() {
               <Sidebar.Item
                 icon={AlertCircle}
                 onClick={() => navigate("/")}
-                className={`transition-colors duration-300 flex items-center hover:bg-primary-700 ${
-                  isActive("/") ? "bg-primary-500" : ""
-                } ${isOpen ? "max-w-[200px]" : "max-w-[40px]"}`}
+                className={`transition-colors duration-300 flex items-center hover:bg-primary-700 ${isActive("/") ? "bg-primary-500" : ""
+                  } ${isOpen ? "max-w-[200px]" : "max-w-[40px]"}`}
               >
                 {isOpen && "Production"}
               </Sidebar.Item>
 
-              <Sidebar.Item
-                icon={AlertTriangle}
-                onClick={() => navigate("/color")}
-                className={`transition-colors duration-300 flex items-center hover:bg-primary-700 ${
-                  isActive("/upcomingDeliveries") ? "bg-primary-500" : ""
-                } ${isOpen ? "max-w-[200px]" : "max-w-[40px]"}`}
-              >
-                {isOpen && "Color"}
-              </Sidebar.Item>
+
             </Sidebar.ItemGroup>
           </Sidebar.Items>
 

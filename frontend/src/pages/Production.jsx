@@ -1,4 +1,3 @@
-import React from "react";
 import CollapsableSidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import ProductionsTable from "../components/ProductionsTable";
