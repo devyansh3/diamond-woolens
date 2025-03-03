@@ -5,6 +5,8 @@ import {
   AlertCircle,
   ArrowLeftCircleIcon,
   ArrowRightCircleIcon,
+  UserRoundPen,
+  Users2,
 
 } from "lucide-react";
 import { motion } from "framer-motion";
@@ -96,6 +98,28 @@ function CollapsableSidebar() {
                   } ${isOpen ? "max-w-[200px]" : "max-w-[40px]"}`}
               >
                 {isOpen && "Orders"}
+              </Sidebar.Item>
+
+
+            </Sidebar.ItemGroup>
+
+            <Sidebar.ItemGroup>
+              <Sidebar.Item
+                icon={Users2}
+                onClick={() => navigate("/customers")}
+                className={`transition-colors duration-300 flex items-center hover:bg-primary-700 ${isActive("/customers") ? "bg-primary-500" : ""
+                  } ${isOpen ? "max-w-[200px]" : "max-w-[40px]"}`}
+              >
+                {isOpen && "Customers"}
+              </Sidebar.Item>
+
+              <Sidebar.Item
+                icon={UserRoundPen}
+                onClick={() => navigate("/salesagents")}
+                className={`transition-colors duration-300 flex items-center hover:bg-primary-700 ${isActive("/salesagents") ? "bg-primary-500" : ""
+                  } ${isOpen ? "max-w-[200px]" : "max-w-[40px]"}`}
+              >
+                {isOpen && "Sales Agents"}
               </Sidebar.Item>
 
 
